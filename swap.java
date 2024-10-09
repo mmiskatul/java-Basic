@@ -1,5 +1,12 @@
 import java.util.Scanner;
 public class swap {
+    static int []sawpwithoutemp(int a,int b){
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        int ans[]={a,b};
+        return ans;
+    }
     static int[] sawpwithTemp(int a,int b){
         int temp=a;
         a=b;
@@ -14,7 +21,11 @@ public class swap {
         System.out.println();
         System.out.print("b: ");
         int b=sc.nextInt();
-        int value[]=sawpwithTemp(a, b);
+        // int value[]=sawpwithTemp(a, b);
+      int  value[]=sawpwithoutemp(a, b);
         System.out.println("after sawp \na: "+value[0]+"\nb :"+value[1]);
+        
+        
+
     }
 }
